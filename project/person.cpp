@@ -36,8 +36,6 @@
             std::string getName(){return name;}
             int getAge(){return age;}
             char getGender(){return gender;}
-
-            
         };
     }
 
