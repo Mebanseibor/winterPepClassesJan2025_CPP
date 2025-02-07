@@ -1,0 +1,13 @@
+gitignore/
+exercises/
+project/
+.vscode/
+
+
+
+sandbox.*
+notes.*
+README.*
+
+*.drawio
+*.exe

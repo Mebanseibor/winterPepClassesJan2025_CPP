@@ -213,11 +213,11 @@
     - When no exact match is found, implicit type casting is applied to the argument to resolve the function call
         - Order:
             $$
-            \text{Character}\\
-            \downarrow \\
-            \text{Integer}\\
-            \downarrow \\
-            \text{Double}\\
+            \text{Character}\\\\
+            \downarrow \\\\
+            \text{Integer}\\\\
+            \downarrow \\\\
+            \text{Double}\\\\
             $$
         
         - Example:
@@ -659,11 +659,11 @@
 
     - ##### Inherited access modifiers:
         $$
-        \text{Public}\\
-        \downarrow\\
-        \text{Protected}\\
-        \downarrow\\
-        \text{Private}\\
+        \text{Public}\\\\
+        \downarrow\\\\
+        \text{Protected}\\\\
+        \downarrow\\\\
+        \text{Private}\\\\
         $$
 
 - #### Function overriding:
@@ -904,8 +904,8 @@
     
     - Procedures:
         $$
-            \text{Creates a file, if it does not exist}\\
-            \downarrow\\
+            \text{Creates a file, if it does not exist}\\\\
+            \downarrow\\\\
             \text{Writes into the opened file (overwrites)}
         $$
 
@@ -923,8 +923,8 @@
 
     - Procedures:
         $$
-            \text{Creates a file, if it does not exist}\\
-            \downarrow\\
+            \text{Creates a file, if it does not exist}\\\\
+            \downarrow\\\\
             \text{Appends into the opened file}
         $$
 
@@ -1040,9 +1040,59 @@
 
 
 
-### Error Handling
+### Exception Handling
+- "*It is the act of handling unexpected behaviors, exceptions and errors in the program*"
+
+- #### Run-time VS Compile-time error:
+
+    | Run time error            | Compile time error            |
+    | ------------------------- | ----------------------------- |
+    | "*It is a logical error*" | "*It is a syntactical error*" |
+
+- #### Catching a user-defined error:
+    ```cpp
+    try{
+        throw(); // throws a user-defined error
+    }
+        catch(const &e){ // statement(s) to handle error
+    }
+    ```
+
+- #### Catching any error:
+    ```cpp
+    try{
+        // statements(s) to try
+    }
+    catch(...){
+        // statement(s) to handle error
+    }
+    ```
 
 
+### Standard Library
+- "*A standard template library/of common and standardized algorithms and containers*"
+
+- #### Algorithm:
+    - Sorting
+    - Searching
+
+- #### Containers:
+    - Array
+    - Vector
+    - List
+    - Queue
+    - Stack
+    - Map
+    - $\vdots$
+
+- #### Generic functions:
+    - size()
+    - length()
+    - front()
+    - back()
+    - begin()
+    - end()
+    - empty()
 
 ## Questions:
 - What is class?
