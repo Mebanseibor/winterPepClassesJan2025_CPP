@@ -14,7 +14,11 @@
         
         public:
             Log(){
-                this->logFileWriter.open("log file.txt", std::ios::app);
+                this->logFileWriter.open("debugger.txt", std::ios::app);
+            }
+
+            Log(std::string logFileName){
+                this->logFileWriter.open(logFileName+".txt", std::ios::app);
             }
 
             bool isLogFileOpen(){

@@ -1,11 +1,15 @@
 #ifndef person
     #define person
 
+    #include "log.h"
     #include <string>
-
+    
+    loglib::Log logUser;
+    loglib::Log logDebugger;
+    int guidPerson;
+    
     namespace person
     {
-        extern int guidPerson = 0;
 
         class Person{
             int guid = 0;
@@ -15,32 +19,46 @@
 
             void assignGUID(){
                 guid = ++guidPerson;
+                logDebugger.writeLog("Assigned GUID");
             };
 
         public:
             Person(){
+                logDebugger.writeLog("Created an object of class Person");
                 assignGUID();
             }
             
             Person(std::string name){
+                logDebugger.writeLog("Created an object of class Person with arguments name");
+
                 assignGUID();
+
                 this->name = name;
+                logDebugger.writeLog("Assigned arguments to the object");
             }
             
             Person(std::string name, int age){
+                logDebugger.writeLog("Created an object of class Person with arguments name, age");
+                
                 assignGUID();
+
                 this->name = name;
                 this->age = age;
+                logDebugger.writeLog("Assigned arguments to the object");
             }
             
             Person(std::string name, int age, char gender){
+                logDebugger.writeLog("Created an object of class Person with arguments name, age, gender");
+                
                 assignGUID();
+
                 this->name = name;
                 this->age = age;
                 this->gender = gender;
+                logDebugger.writeLog("Assigned arguments to the object");
             }
 
-            ~Person(){    
+            ~Person(){
             }
 
             // getter functions
