@@ -29,8 +29,12 @@ void start(){
     int choice = -1;
     while(choice != 0){
         std::cout << "Enter your choice:\n";
-        std::cin >> choice;
         
+        logDebugger.writeLog("Waiting for input of choice from the user");
+        std::cin >> choice;
+        logDebugger.writeLog("Input of choice was given by the user");
+        
+        logDebugger.writeLog("Start of Matching the inputted choice");
         switch(choice){
             case 0:{
                 logDebugger.writeLog("User selected option 0");
@@ -46,12 +50,13 @@ void start(){
                 break;
             }
             default:{
-                logDebugger.writeLog("User entered invalid option ");
+                logDebugger.writeLog("User entered invalid option");
 
                 std::cout << "Invalid Input\n";
                 break;
             }
         };
+        logDebugger.writeLog("End of matching of the inputted choice");
     }
     
     logDebugger.writeLog("End of \'start\' function");

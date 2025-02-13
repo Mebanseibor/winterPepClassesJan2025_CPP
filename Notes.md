@@ -1100,12 +1100,13 @@
 
 - #### Functions:
 
-    | Name                                                | Action                                               |
-    | --------------------------------------------------- | ---------------------------------------------------- |
-    | size()                                              | returns the size of the vector                       |
-    | begin()                                             | returns the beginning index of the vector            |
-    | end()                                               | returns the ending index of the vector               |
-    | copy(startingIndex, endingIndex, destinationVector) | copies the content from one vector to another vector |
+    | Name                                                        | Action                                               |
+    | ----------------------------------------------------------- | ---------------------------------------------------- |
+    | size()                                                      | returns the size of the vector                       |
+    | begin()                                                     | returns the beginning index of the vector            |
+    | end()                                                       | returns the ending index of the vector               |
+    | copy(startingIndex, endingIndex, destinationVectorIterator) | copies the content from one vector to another vector |
+    | resize()                                                    | resizes the size of the vector                       |
 
 
 

@@ -2,10 +2,11 @@
 
 ## Table of content
 
-| Content                                     |
-| ------------------------------------------- |
+| Content                                      |
+| -------------------------------------------- |
 | 👋🏼 [Introduction](#content-introduction) |
-| 🧭 [Navigator](#content-navigator) |
+| 🧭 [Navigator](#content-navigator)          |
+| 🔗 [Links](#content-links) |
 
 
 ## <p id='content-introduction'>Introduction 👋🏼</p>
@@ -21,9 +22,15 @@
 | [Project][directory-project] |
 
 
+## <p id='content-links'>Links</p>
+- About [ISBN][weblink-isbn-content]
+
 
 
 
 <!-- directorylinks -->
 [directorylink-notes]: ./Notes.md
 [directory-project]: ./Project/
+
+<!-- weblinks -->
+[weblink-isbn-content]: https://www.isbn-international.org/content/what-isbn/10

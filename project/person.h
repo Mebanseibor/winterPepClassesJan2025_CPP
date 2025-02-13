@@ -11,6 +11,7 @@
     namespace person
     {
         class Person{
+        protected:
             int guid = 0;
             std::string name = "";
             int age = -1;
@@ -67,12 +68,38 @@
             char getGender(){return gender;}
         };
 
-        class Librarian:Person{
+        class LibraryPerson:Person{
+        protected:
+        public:
+            void displayBooks(){}
+
+            void displayOpeningTimings(){}
+        };
+
+        class Librarian:LibraryPerson{
+        public:
             Librarian(){}
+            
+            // books
+            void addBook(){}
+            void editBook(){}
+            void deleteBook(){}
+
+            // customers
+            void addCustomer(){}
+            void editCustomer(){}
+            void deleteCustomer(){}
+            void displayCustomers(){}
         };
         
-        class Customer:Person{
+        class Customer:LibraryPerson{
+        public:
             Customer(){}
+
+            // books
+            void issueBook(){}
+            void requestBook(){}
+            void displayIssuedBooks(){}
         };
     }
 
