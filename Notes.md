@@ -1094,6 +1094,56 @@
     - end()
     - empty()
 
+
+### Vectors:
+- "**"
+
+- #### Functions:
+
+    | Name                                                | Action                                               |
+    | --------------------------------------------------- | ---------------------------------------------------- |
+    | size()                                              | returns the size of the vector                       |
+    | begin()                                             | returns the beginning index of the vector            |
+    | end()                                               | returns the ending index of the vector               |
+    | copy(startingIndex, endingIndex, destinationVector) | copies the content from one vector to another vector |
+
+
+
+- #### Iterator:
+    - "**"
+
+    - ##### Data type:
+        ```cpp
+        vector<dataType>::iterator var = vectorExample.begin();
+        ```
+    
+    - ##### Example:
+        - Taking in the first and last index
+            ```cpp
+            auto var = vectorExample.begin();
+            auto var = vectorExample.end();
+            ```
+
+
+### Algorithm:
+- "**"
+
+- #### Functions:
+    | Name                                    | Action                                        |
+    | --------------------------------------- | --------------------------------------------- |
+    | min_element(startingIndex, endingIndex) | returns the index which has the minimum value |
+    | max_element(startingIndex, endingIndex) | returns the index which has the maximum value |
+
+### Pair"
+- "**"
+
+- #### Functions:
+    | Name     | Action |
+    | -------- | ------ |
+    | first()  |        |
+    | second() |        |
+
+
 ## Questions:
 - What is class?
 

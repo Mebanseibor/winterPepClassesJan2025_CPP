@@ -5,6 +5,7 @@
     #include <ctime>
     #include <chrono>
     #include <fstream>
+    #include <iomanip>
 
     namespace loglib{
         class Log{
@@ -29,7 +30,11 @@
             void writeLog(std::string message){
                 if(!isLogFileOpen())return;
                 
-                logFileWriter  << "[" << "time" << "]\t" << message << "\n";  // outputs the content to the linked file
+                auto now = std::chrono::system_clock::now();
+                auto now_c = std::chrono::system_clock::to_time_t(now);
+                std::tm now_tm = *std::localtime(&now_c);
+                
+                logFileWriter  << "[" << std::put_time(&now_tm, "%Y-%m-%d %H:%M:%S") << "]\t" << message << "\n";  // outputs the content to the linked file
             }
 
             ~Log(){

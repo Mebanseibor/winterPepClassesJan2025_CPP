@@ -10,7 +10,6 @@
     
     namespace person
     {
-
         class Person{
             int guid = 0;
             std::string name = "";
@@ -66,6 +65,14 @@
             std::string getName(){return name;}
             int getAge(){return age;}
             char getGender(){return gender;}
+        };
+
+        class Librarian:Person{
+            Librarian(){}
+        };
+        
+        class Customer:Person{
+            Customer(){}
         };
     }
 
