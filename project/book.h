@@ -19,6 +19,13 @@
             int countIssued;
             std::vector<int> categories;
             int rating;
+        public:
+            Book(){
+                logDebugger.writeLog("Create an object of class Book with no arguments");
+            }
+            ~Book(){
+                logDebugger.writeLog("Destroying an object");
+            }
         };
     }
 

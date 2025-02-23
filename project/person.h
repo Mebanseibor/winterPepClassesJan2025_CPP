@@ -71,6 +71,8 @@
         class LibraryPerson:Person{
         protected:
         public:
+            LibraryPerson(std::string name, int age, char gender) : Person(name, age, gender){}
+
             void displayBooks(){}
 
             void displayOpeningTimings(){}
@@ -78,7 +80,35 @@
 
         class Librarian:LibraryPerson{
         public:
-            Librarian(){}
+            Librarian(std::string name, int age, char gender) : LibraryPerson(name, age, gender){
+                bool takePassword = true;
+                bool isPasswordCorrect = false;
+                int password = -1;
+                
+                while(takePassword){
+                    std::cout << "0. Exit\n";
+                    std::cout << "Enter password for creation of Librarian Account: \n";
+                    std::cin >> password;
+                    switch (password){
+                        case 0:{
+                            takePassword = false;
+                            break;
+                        }
+                        case 1234:{
+                            isPasswordCorrect = true;
+                            takePassword = false;
+                            break;
+                        }
+                        default:{
+                            std::cout << "Wrong password\n";
+                            break;
+                        };
+                    }
+                }
+                if(isPasswordCorrect){
+                    std::cout << "Librarian Account was successfully created\n";
+                }
+            }
             
             // books
             void addBook(){}
@@ -94,7 +124,9 @@
         
         class Customer:LibraryPerson{
         public:
-            Customer(){}
+            Customer(std::string name, int age, char gender) : LibraryPerson(name, age, gender){
+                std::cout << "Customer Account was successfully created\n";
+            }
 
             // books
             void issueBook(){}
