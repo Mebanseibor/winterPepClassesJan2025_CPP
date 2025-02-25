@@ -4,8 +4,8 @@
     #include "log.h"
     #include <string>
     
-    loglib::Log logUser;
-    loglib::Log logDebugger;
+    extern loglib::Log logUser;
+    extern loglib::Log logDebugger;
     int guidPerson;
     
     namespace person
@@ -71,6 +71,8 @@
         class LibraryPerson:Person{
         protected:
         public:
+            LibraryPerson() : Person(){};
+            
             LibraryPerson(std::string name, int age, char gender) : Person(name, age, gender){}
 
             void displayBooks(){}
@@ -124,6 +126,8 @@
         
         class Customer:LibraryPerson{
         public:
+            Customer() : LibraryPerson(){};
+            
             Customer(std::string name, int age, char gender) : LibraryPerson(name, age, gender){
                 std::cout << "Customer Account was successfully created\n";
             }

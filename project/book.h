@@ -5,8 +5,8 @@
     #include <vector>
     #include "log.h"
 
-    loglib::Log logDebugger;
-    loglib::Log logUser;
+    extern loglib::Log logUser;
+    extern loglib::Log logDebugger;
 
     namespace book{
         class Book{

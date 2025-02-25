@@ -1,8 +1,16 @@
 #include <iostream>
 #include "log.h"
 #include "person.h"
+#include "book.h"
 
 #define LOGDEBUGGER "debugger"
+
+loglib::Log logDebugger(LOGDEBUGGER);
+loglib::Log logUser("User");
+
+person::Customer CUSTOMERS[128];
+// person::Librarian LIBRARIANS[128];
+// book::Book BOOKS[128];
 
 void errorLogFile(){
     std::cout << "ERROR: Cannot open Log file \n";
@@ -17,6 +25,19 @@ void test(){
     person::Person user2("Christy");
     person::Person user3("Kelly", 40);
     person::Person user4("Adrian", 35, 'M');
+
+    book::Book book();
+}
+
+
+void retrieveCustomers(){};
+void retrieveLibrarians(){};
+void retrieveBooks(){};
+
+void retrieveData(){
+    retrieveCustomers();
+    retrieveLibrarians();
+    retrieveBooks();
 }
 
 void userAction(){
@@ -215,8 +236,6 @@ void start(){
 }
 
 int main(){
-    loglib::Log logDebugger(LOGDEBUGGER);
-    
     if(!logDebugger.isLogFileOpen()){
         errorLogFile();
         return 1;
@@ -224,7 +243,6 @@ int main(){
     
     logDebugger.writeLog("Created a log object");
     
-    loglib::Log logUser("User");
     if(!logUser.isLogFileOpen()){
         errorLogFile();
         return 1;
